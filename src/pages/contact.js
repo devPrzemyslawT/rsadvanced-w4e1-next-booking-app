@@ -1,8 +1,15 @@
+import Head from "next/head";
+
 function Contact() {
 	return (
-		<div>
-			<p>Contact</p>
-		</div>
+		<>
+			<Head>
+				<title>Contact</title>
+			</Head>
+			<div>
+				<p>Contact</p>
+			</div>
+		</>
 	);
 }
 
