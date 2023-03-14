@@ -29,6 +29,9 @@ const Menu = () => {
 			<Link href='/contact' legacyBehavior passHref>
 				<NavLink legacyBehavior>Contact</NavLink>
 			</Link>
+			<Link href='/posts' legacyBehavior passHref>
+				<NavLink legacyBehavior>Posts</NavLink>
+			</Link>
 		</nav>
 	);
 };

@@ -1,0 +1,30 @@
+import { useState, useEffect } from "react";
+
+function Posts() {
+	const [posts, setPosts] = useState([]);
+
+	useEffect(() => {
+		fetch("https://jsonplaceholder.typicode.com/posts")
+			.then(response => response.json())
+			.then(data => setPosts(data.slice(0, 10)))
+			// console.log(posts);
+			.catch(error => console.log(error));
+	}, []);
+
+	return (
+		<div>
+			<h1>Posts:</h1>
+			Nowy post:
+			{posts &&
+				posts.map(elem => (
+					// console.log(`Title: ${elem.title}, body: ${elem.body}`);
+					<div key={`post-${elem.id}`}>
+						<h3>{elem.title}</h3>
+						<p>{elem.body}</p>
+					</div>
+				))}
+		</div>
+	);
+}
+
+export default Posts;

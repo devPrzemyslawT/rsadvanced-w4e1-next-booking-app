@@ -7,7 +7,7 @@ function Post() {
 	return (
 		<div>
 			<h1>Post:{slug[0]}</h1>
-			<p></p>
+			
 		</div>
 	);
 }
