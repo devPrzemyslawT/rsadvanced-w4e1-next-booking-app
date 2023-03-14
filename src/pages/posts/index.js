@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-
+// import { useState, useEffect } from "react";
+import Link from "next/link";
 function Posts({ posts }) {
 	// const [posts, setPosts] = useState([]);
 
@@ -19,7 +19,9 @@ function Posts({ posts }) {
 				posts.map(elem => (
 					// console.log(`Title: ${elem.title}, body: ${elem.body}`);
 					<div key={`post-${elem.id}`}>
-						<h3>{elem.title}</h3>
+						<Link href={`/posts/${elem.id}`}>
+							<h3>{elem.title}</h3>
+						</Link>
 						<p>{elem.body}</p>
 					</div>
 				))}

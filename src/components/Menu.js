@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 // eslint-disable-next-line react/display-name
 const NavLink = forwardRef(({ href, onClick, children }, ref) => {
 	const router = useRouter();
-	console.log(router);
+	// console.log(router);
 	return (
 		<a
 			href={href}
